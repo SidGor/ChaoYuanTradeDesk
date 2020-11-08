@@ -107,8 +107,8 @@ class ListFetch(TraderApiBase):
 
 # 账户配置
 future_account = get_simnow_account(
-    investor_id='044392',                   # SimNow账户
-    password='123456',                     # SimNow账户密码
+    investor_id='',                   # SimNow账户
+    password='',                     # SimNow账户密码
     instrument_id_list=None,  # 合约列表
     server_name='电信1'                      # 电信1、电信2、移动、TEST
 )
@@ -140,13 +140,9 @@ my_future_account_info_dict = {
                              '其他1': {'TDServer': "180.168.146.187:10130", 'MDServer': '180.168.146.187:10131'},  # 7*24
                              '其他2': {'TDServer': "218.202.237.33:10102", 'MDServer': '218.202.237.33:10112'},  # 移动
                              },
-#        investor_id='044390',  # 测试账户 密码相同
-##        investor_id='044392',  # 账户 密码相同
-        investor_id='044392',  # 账户 密码相同
+        investor_id='',  # 账户 密码相同
 
-        password='123456',  # 测试账户密码
-#        investor_id='153958',  # CTA策略账户
-#        password='Lovdam8785!',  # CTA策略密码
+        password='',  # 测试账户密码
 
         app_id='simnow_client_test',  # 认证使用AppID
         auth_code='0000000000000000',  # 认证使用授权码
@@ -154,30 +150,6 @@ my_future_account_info_dict = {
         instrument_info=instrument_info,
     ),
     
-    'SimNow-CY': FutureAccountInfo(
-        broker_id='9999',  # 期货公司BrokerID
-        # TDServer为交易服务器，MDServer为行情服务器。服务器地址格式为"ip:port。"
-        server_dict={'TDServer': "180.168.146.187:10101", 'MDServer': '180.168.146.187:10110'},
-        # 备用服务器地址
-        reserve_server_dict={'电信1': {'TDServer': "180.168.146.187:10100", 'MDServer': '180.168.146.187:10110'},
-                             '电信2': {'TDServer': "180.168.146.187:10101", 'MDServer': '180.168.146.187:10111'},
-
-                             '其他1': {'TDServer': "180.168.146.187:10130", 'MDServer': '180.168.146.187:10131'},  # 7*24
-                             '其他2': {'TDServer': "218.202.237.33:10102", 'MDServer': '218.202.237.33:10112'},  # 移动
-                             },
-#        investor_id='044390',  # 测试账户 密码相同
-##        investor_id='044392',  # 账户 密码相同
-        investor_id='153958',  # 账户 密码相同
-
-        password='Lovdam8785!',  # 测试账户密码
-#        investor_id='153958',  # CTA策略账户
-#        password='Lovdam8785!',  # CTA策略密码
-
-        app_id='simnow_client_test',  # 认证使用AppID
-        auth_code='0000000000000000',  # 认证使用授权码
-        # 订阅合约列表
-        instrument_info=instrument_info,
-    ),
 
     # 非交易使用测试
     'SimNow24': FutureAccountInfo(
@@ -186,10 +158,8 @@ my_future_account_info_dict = {
         server_dict={'TDServer': "180.168.146.187:10130", 'MDServer': '180.168.146.187:10131'},
         # 备用服务器地址
         reserve_server_dict={},
-#        investor_id='044390',  # 测试账户 密码相同
-#        investor_id='044392',  # 账户 密码相同
-        investor_id='044392',  # 账户 密码相同
-        password='123456',  # 密码
+        investor_id='',  # 账户 密码相同
+        password='',  # 密码
         app_id='simnow_client_test',  # 认证使用AppID
         auth_code='0000000000000000',  # 认证使用授权码
         # 订阅合约列表
